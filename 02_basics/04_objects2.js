@@ -42,6 +42,25 @@ const users ={
     email:"h@gmail.com"
 }
 
+ // object destructuring
+
+ const course ={
+    coursename : "javascript",
+    price :"999",
+    courseInstructor:"hitesh"
+ }
+
+ const{courseInstructor:instruct} =course
+ console.log(instruct)
+
+ //JSON API
+
+ [
+    {},
+    {},
+    {}
+]
+
 
 
 
