@@ -1,0 +1,49 @@
+===> JAVASCRIPT EXECUTION CONTEXT <===
+
+{} ---> GLOBAL EXECUTION CONTEXT 
+---> FUNCTION EXECUTION CONTEXT
+---> EVAL EXECUTION CONTEXT
+
+{}= MEMORY CREATION PHASE
+--->EXECUTION PHASE
+
+let val1 =10
+let val2 =5
+function addNum (num1 , num2) {
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1 , val2)
+let result2 = addNum(10 , 2)
+
+1.Global execution --this
+
+2.Creation phase--val1 ->undefined
+--val2-->undefined
+--addNum --> definition
+--result1 -->undefined
+--result2--> undefined
+
+3.Execution phase --val1 =10
+--val2 =5
+--addNum --->
+NEW  VARIABLE ENVIRONMENT + EXECUTION THREAD
+Memory phase --val1 --> undefined
+--val2--> undefined
+--total -->undefined
+Execution phase--
+num1 =10
+num2 =5
+total =15 -----> return to Global executional CONTEXT
+
+--result =15
+--result2=
+
+ //call stack
+ 
+| three()         |
+|  tw0()          |
+|  one()          |
+|________________ |
+| global exec     |
+|_________________|
